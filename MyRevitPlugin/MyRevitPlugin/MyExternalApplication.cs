@@ -11,6 +11,17 @@ namespace MyRevitPlugin
             Application app = UiApplication.Application;
 
             TaskDialog.Show(GetType().FullName, $"Hello {app.Username}");
+
+            DebugPanel();
+
+            void DebugPanel()
+            {
+#if DEBUG
+                RibbonPanel panel = Application.CreateRibbonPanel(Tab.AddIns, nameof(MyRevitPlugin));
+                var button = panel.AddItem(new PulldownButtonData("myPulldownButton", "myText")) as PulldownButton;
+                button.AddPushButton<MyExternalCommand>("myText");
+#endif
+            }
         }
     }
 }
