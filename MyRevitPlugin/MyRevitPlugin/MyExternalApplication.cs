@@ -10,7 +10,7 @@ namespace MyRevitPlugin
         {
             Application app = UiApplication.Application;
 
-            TaskDialog.Show(GetType().FullName, "Hello" + app.Username);
+            TaskDialog.Show(GetType().FullName, $"Hello {app.Username}");
         }
     }
 }
