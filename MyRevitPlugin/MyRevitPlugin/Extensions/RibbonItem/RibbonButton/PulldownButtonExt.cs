@@ -4,12 +4,16 @@ namespace MyRevitPlugin
 {
     public static class PulldownButtonExt
     {
-        public static PushButton AddPushButton<T>(this PulldownButton pulldown, string txt, string toolTip = "")
+        /// <summary>
+        /// Adds a new pushbutton and associates it with an <see cref="IExternalCommand"/>
+        /// </summary>
+        public static PushButton AddPushButton<T>(this PulldownButton pulldown, string txt = null, string toolTip = "")
             where T : IExternalCommand
         {
+            txt = txt ?? typeof(T).Name;
             var pushButton = pulldown.AddPushButton(new PushButtonData(typeof(T).Name, txt, typeof(T).Assembly.Location, typeof(T).FullName)
             {
-                ToolTip = toolTip
+                ToolTip = toolTip,
             });
 
             return pushButton;

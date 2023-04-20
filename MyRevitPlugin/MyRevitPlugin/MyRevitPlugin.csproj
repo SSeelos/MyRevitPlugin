@@ -59,11 +59,21 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\AssemblyExt.cs" />
+    <Compile Include="Extensions\ObjectExt.cs" />
     <Compile Include="Extensions\RibbonItem\RibbonButton\PulldownButtonExt.cs" />
     <Compile Include="Extensions\RibbonItem\RibbonButton\PushButtonExt.cs" />
+    <Compile Include="Extensions\RibbonItem\RibbonPanelExt.cs" />
+    <Compile Include="Extensions\UIControlledApplicationExt.cs" />
+    <Compile Include="ExternalApplications\MyExternalApp.cs" />
+    <Compile Include="ExternalApplications\MyThrowingApp.cs" />
+    <Compile Include="ExternalApplications\_MyExternalApplication.cs" />
+    <Compile Include="ExternalCommands\LoadFromDll.cs" />
     <Compile Include="ExternalCommands\MyExternalCommand.cs" />
-    <Compile Include="ExternalCommands\_MyExternalCommand.cs" />
-    <Compile Include="MyExternalApplication.cs" />
+    <Compile Include="ExternalCommands\MyNice3pointCommand.cs" />
+    <Compile Include="ExternalCommands\MyThrowingCommand.cs" />
+    <Compile Include="ExternalCommands\_MyExternalCmd.cs" />
+    <Compile Include="ExternalApplications\MyNice3pointApplication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

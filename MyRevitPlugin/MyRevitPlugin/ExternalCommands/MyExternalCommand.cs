@@ -4,11 +4,12 @@ using Autodesk.Revit.UI;
 namespace MyRevitPlugin
 {
     [Transaction(TransactionMode.Manual)]
-    public class MyExternalCommand : _MyExternalCommand
+    public class MyExternalCommand : _MyExternalCmd
     {
-        public override void Execute(ExternalCommandData commandData)
+        public override void TryExecute(ExternalCommandData commandData)
         {
-            TaskDialog.Show(commandData.View.Name, commandData.View.ViewType.ToString());
+            var user = commandData.Application.Application.Username;
+            TaskDialog.Show(GetType().FullName, $"Hi {user}");
         }
     }
 }

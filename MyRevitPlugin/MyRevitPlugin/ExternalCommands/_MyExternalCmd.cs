@@ -4,13 +4,13 @@ using System;
 
 namespace MyRevitPlugin
 {
-    public abstract class _MyExternalCommand : IExternalCommand
+    public abstract class _MyExternalCmd : IExternalCommand
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
             try
             {
-                Execute(commandData);
+                TryExecute(commandData);
             }
             catch (Exception exception)
             {
@@ -20,6 +20,9 @@ namespace MyRevitPlugin
 
             return Result.Succeeded;
         }
-        public abstract void Execute(ExternalCommandData commandData);
+        /// <summary>
+        /// try execute (catch exception)
+        /// </summary>
+        public abstract void TryExecute(ExternalCommandData commandData);
     }
 }

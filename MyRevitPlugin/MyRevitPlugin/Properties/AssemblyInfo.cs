@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("MyRevitPlugin")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("my revit plugin test project")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("MyRevitPlugin")]
