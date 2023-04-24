@@ -59,7 +59,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Extensions\AssemblyExt.cs" />
     <Compile Include="Extensions\ObjectExt.cs" />
     <Compile Include="Extensions\RibbonItem\RibbonButton\PulldownButtonExt.cs" />
