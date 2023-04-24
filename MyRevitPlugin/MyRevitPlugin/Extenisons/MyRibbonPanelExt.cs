@@ -1,9 +1,11 @@
 ﻿using Autodesk.Revit.UI;
+using MyRevitViews;
 
 namespace MyRevitPlugin
 {
-    public static class RibbonPanelExt
+    public class MyRibbonPanelExt
     {
+
         public static RibbonPanel DebugPanel(UIControlledApplication application)
         {
 #if DEBUG
@@ -15,6 +17,15 @@ namespace MyRevitPlugin
             button.AddPushButton<LoadFromDll>();
             return panel;
 #endif
+        }
+        public static RibbonPanel MyRibbonPanel(UIControlledApplication application)
+        {
+            application.CreateRibbonTab(nameof(MyRevitPlugin));
+
+            var panel = application.CreateRibbonPanel(nameof(MyRevitPlugin), nameof(MyRevitPlugin) + "Panel");
+            panel.AddButton<MyViewApp>("myButton");
+
+            return panel;
         }
     }
 }

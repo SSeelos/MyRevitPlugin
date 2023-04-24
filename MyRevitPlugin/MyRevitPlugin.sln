@@ -5,6 +5,12 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRevitPlugin", "MyRevitPlugin\MyRevitPlugin.csproj", "{49F00F3D-9F64-47DE-A55B-5BD571D31531}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRevitViewModels", "MyRevitViewModels\MyRevitViewModels.csproj", "{BF745159-6BCF-4C35-9156-F03E98D82A7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRevitViews", "MyRevitViews\MyRevitViews.csproj", "{0FE119A4-8B6B-4D46-8796-931F0D8BFA0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRevitExtensions", "MyRevitExtensions\MyRevitExtensions.csproj", "{E2052F1F-E67D-4B90-9236-B9BB4C52093D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{49F00F3D-9F64-47DE-A55B-5BD571D31531}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49F00F3D-9F64-47DE-A55B-5BD571D31531}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49F00F3D-9F64-47DE-A55B-5BD571D31531}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF745159-6BCF-4C35-9156-F03E98D82A7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF745159-6BCF-4C35-9156-F03E98D82A7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF745159-6BCF-4C35-9156-F03E98D82A7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF745159-6BCF-4C35-9156-F03E98D82A7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FE119A4-8B6B-4D46-8796-931F0D8BFA0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FE119A4-8B6B-4D46-8796-931F0D8BFA0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FE119A4-8B6B-4D46-8796-931F0D8BFA0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FE119A4-8B6B-4D46-8796-931F0D8BFA0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2052F1F-E67D-4B90-9236-B9BB4C52093D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2052F1F-E67D-4B90-9236-B9BB4C52093D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2052F1F-E67D-4B90-9236-B9BB4C52093D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2052F1F-E67D-4B90-9236-B9BB4C52093D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
