@@ -75,6 +75,10 @@
       <Project>{e2052f1f-e67d-4b90-9236-b9bb4c52093d}</Project>
       <Name>MyRevitExtensions</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MyRevitViewModels\MyRevitViewModels.csproj">
+      <Project>{bf745159-6bcf-4c35-9156-f03e98d82a7e}</Project>
+      <Name>MyRevitViewModels</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyRevitViews\MyRevitViews.csproj">
       <Project>{0fe119a4-8b6b-4d46-8796-931f0d8bfa0e}</Project>
       <Name>MyRevitViews</Name>

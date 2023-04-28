@@ -8,8 +8,8 @@ namespace MyRevitPlugin
         public static RibbonPanel DebugPanel(UIControlledApplication application)
         {
 #if DEBUG
-            var panel = application.CreateRibbonPanel(Tab.AddIns, nameof(MyRevitPlugin) + "(Debug)");
-            var button = panel.AddItem(new PulldownButtonData("myPulldownButton", "My" + nameof(PulldownButtonData))) as PulldownButton;
+            RibbonPanel panel = application.CreateRibbonPanel(Tab.AddIns, nameof(MyRevitPlugin) + "(Debug)");
+            PulldownButton button = panel.AddItem(new PulldownButtonData("myPulldownButton", "My" + nameof(PulldownButtonData))) as PulldownButton;
             button.AddPushButton<MyExternalCommand>();
             button.AddPushButton<MyThrowingCommand>();
             button.AddPushButton<MyNice3pointCommand>();

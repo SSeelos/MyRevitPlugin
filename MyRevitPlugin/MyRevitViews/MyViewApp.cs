@@ -1,6 +1,8 @@
 ﻿using Autodesk.Revit.Attributes;
 using Autodesk.Revit.UI;
 using MyRevitPlugin;
+using MyRevitViewModels;
+using Serilog;
 
 namespace MyRevitViews
 {
@@ -11,7 +13,20 @@ namespace MyRevitViews
         {
             TaskDialog.Show(this.GetType().FullName, $"Hello {commandData.Application.Application.Username}");
 
-            new MainV().Show();
+            //var builder = new ContainerBuilder();
+
+            //builder.RegisterType<MainV>().SingleInstance();
+            //builder.RegisterType<MainVM>().SingleInstance();
+
+            //IContainer c = builder.Build();
+            //c.Resolve<MainV>().Show();
+
+            ILogger logger = new LoggerConfiguration()
+                .WriteTo.Debug()
+                .CreateLogger();
+
+            var main = new MainV(new MainVM(logger));
+            main.Show();
         }
     }
 }
