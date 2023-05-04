@@ -12,6 +12,7 @@ namespace MyRevitPlugin
 
             TaskDialog.Show(GetType().FullName, $"Hello {app.Username}");
 
+            MyRibbonPanelExt.MyRibbonPanel(Application);
             MyRibbonPanelExt.DebugPanel(Application);
         }
     }

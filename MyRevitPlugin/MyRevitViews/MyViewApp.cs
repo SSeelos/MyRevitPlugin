@@ -20,10 +20,11 @@ namespace MyRevitViews
 
             //IContainer c = builder.Build();
             //c.Resolve<MainV>().Show();
-
             ILogger logger = new LoggerConfiguration()
                 .WriteTo.Debug()
                 .WriteTo.Sink<RevitSink>()
+                .WriteTo.WPFTextblockSink()
+                .WriteTo.RevitErrorFileSink($"{Application.CurrentUsersDataFolderPath}\\logs\\myRevitPluginErrorLog.txt")
                 .CreateLogger();
 
             var main = new MainV(new MainVM(logger));
