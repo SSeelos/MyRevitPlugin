@@ -5,10 +5,10 @@ sample project for a revit plugin using the RevitAPI
 Read automatically by Revit when they are placed in one of two locations
 All files named .addin in these locations will be read and processed by Revit during startup.
 
-In a non-user-specific location in "application data":
+In a non-user-specific location in "ProgramData":
 C:\ProgramData\Autodesk\Revit\Addins\{VERSION}\
 
-In a user-specific location in "application data":
+In a user-specific location in "AppData":
 C:\Users\{USER}\AppData\Roaming\Autodesk\Revit\Addins\{VERSION}\
 
 # Build

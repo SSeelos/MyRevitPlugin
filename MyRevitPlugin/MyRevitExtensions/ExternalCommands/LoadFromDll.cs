@@ -5,7 +5,7 @@ using System.IO;
 namespace MyRevitPlugin
 {
     [Transaction(TransactionMode.ReadOnly)]
-    public class LoadFromDll : _MyExternalCmd
+    public class LoadFromDll : _MyExternalCommand
     {
         public override void TryExecute(ExternalCommandData commandData)
         {

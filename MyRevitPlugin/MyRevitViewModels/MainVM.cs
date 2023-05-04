@@ -7,8 +7,15 @@ namespace MyRevitViewModels
     public class MainVM : ObservableObject
     {
         [ObservableProperty]
-        string myProperty = nameof(myProperty);
+        private string myObservableProperty;
         public readonly ILogger Logger;
+
+        private string myPropertyB = nameof(myPropertyB);
+        public string MyPropertyB
+        {
+            get => myPropertyB;
+            set => SetProperty(ref myPropertyB, value);
+        }
 
 
         public MainVM()
