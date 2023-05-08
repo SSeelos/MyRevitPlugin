@@ -4,7 +4,7 @@ using Autodesk.Revit.UI;
 namespace MyRevitPlugin
 {
     [Transaction(TransactionMode.Manual)]
-    public class MyExternalCommand : _MyExternalCmd
+    public class MyExternalCmd : _MyExternalCommand
     {
         public override void TryExecute(ExternalCommandData commandData)
         {

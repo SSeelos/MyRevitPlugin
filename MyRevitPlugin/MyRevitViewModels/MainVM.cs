@@ -16,6 +16,13 @@ namespace MyRevitViewModels
         }
         public readonly ILogger Logger;
 
+        private string myPropertyB = nameof(myPropertyB);
+        public string MyPropertyB
+        {
+            get => myPropertyB;
+            set => SetProperty(ref myPropertyB, value);
+        }
+
 
         private string _logData;
         public string LogData

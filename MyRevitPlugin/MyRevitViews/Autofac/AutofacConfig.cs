@@ -10,8 +10,7 @@ namespace MyRevitViews
         {
             get
             {
-                if (_autofacContainer == null)
-                    _autofacContainer = BuildContainer();
+                _autofacContainer = _autofacContainer ?? BuildContainer();
                 return _autofacContainer;
             }
         }
@@ -23,7 +22,9 @@ namespace MyRevitViews
             builder.RegisterType<MainV>().SingleInstance();
             builder.RegisterType<MainVM>().SingleInstance();
 
-            return builder.Build();
+            _autofacContainer = builder.Build();
+
+            return _autofacContainer;
         }
     }
 }

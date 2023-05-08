@@ -16,7 +16,7 @@ namespace MyRevitPlugin
             }
             catch (Exception ex)
             {
-                TaskDialog.Show(ex.GetType().Name, ex.Message);
+                TaskDialog.Show(ex.GetType().Name, $"{ex.Message}{Environment.NewLine}{ex.StackTrace}");
                 return Result.Failed;
             }
             return Result.Succeeded;

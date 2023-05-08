@@ -29,9 +29,9 @@ namespace MyRevitExtensions
             {
                 TryExecute(app);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                TaskDialog.Show(e.GetType().Name, e.Message);
+                TaskDialog.Show(ex.GetType().Name, $"{ex.Message}{Environment.NewLine}{ex.StackTrace}");
             }
         }
 
