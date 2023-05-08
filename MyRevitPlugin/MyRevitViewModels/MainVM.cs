@@ -6,8 +6,14 @@ namespace MyRevitViewModels
 {
     public class MainVM : ObservableObject
     {
-        [ObservableProperty]
-        private string myObservableProperty;
+
+
+        private string _myProperty;
+        public string MyProperty
+        {
+            get => _myProperty;
+            set => SetProperty(ref _myProperty, value);
+        }
         public readonly ILogger Logger;
 
         private string myPropertyB = nameof(myPropertyB);
@@ -18,6 +24,15 @@ namespace MyRevitViewModels
         }
 
 
+        private string _logData;
+        public string LogData
+        {
+            get => _logData;
+            set => SetProperty(ref _logData, value);
+        }
+
+
+
         public MainVM()
         {
 
@@ -26,9 +41,17 @@ namespace MyRevitViewModels
         {
             this.Logger = logger;
 
+            WPFTextblockSink.OnWPFTextBlockLog += WPFTextblockSink_OnWPFTextBlockLog;
+
             logger.Information("Hello from MainVM");
 
         }
+
+        private void WPFTextblockSink_OnWPFTextBlockLog(string logData)
+        {
+            LogData = logData;
+        }
+
         public ICommand MyCommand => new MyCommand_MainVM(this);
     }
 }

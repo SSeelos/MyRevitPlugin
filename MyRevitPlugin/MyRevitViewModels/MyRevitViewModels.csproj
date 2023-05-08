@@ -85,7 +85,9 @@
     <Compile Include="Commands\_CommandT.cs" />
     <Compile Include="ExternalEvents\MyExternalEvH.cs" />
     <Compile Include="Logging\LoggerSinkConfigurationExt.cs" />
+    <Compile Include="Logging\RevitErrorFileSink.cs" />
     <Compile Include="Logging\RevitSink.cs" />
+    <Compile Include="Logging\WPFTextblockSink.cs" />
     <Compile Include="MainVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
