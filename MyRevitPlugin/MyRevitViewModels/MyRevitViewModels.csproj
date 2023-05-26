@@ -81,6 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\MyCommand_MainVM.cs" />
+    <Compile Include="Commands\MyThrowingCmd.cs" />
     <Compile Include="Commands\_Command.cs" />
     <Compile Include="Commands\_CommandT.cs" />
     <Compile Include="ExternalEvents\MyExternalEvH.cs" />

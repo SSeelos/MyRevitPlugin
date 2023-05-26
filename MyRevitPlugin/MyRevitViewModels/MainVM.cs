@@ -6,8 +6,6 @@ namespace MyRevitViewModels
 {
     public class MainVM : ObservableObject
     {
-
-
         private string _myProperty;
         public string MyProperty
         {
@@ -53,5 +51,6 @@ namespace MyRevitViewModels
         }
 
         public ICommand MyCommand => new MyCommand_MainVM(this);
+        public ICommand MyThrowingCommand => new MyThrowingCmd(this);
     }
 }

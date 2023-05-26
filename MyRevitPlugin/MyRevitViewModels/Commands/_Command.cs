@@ -5,7 +5,9 @@ namespace MyRevitViewModels
 {
     public abstract class _Command : ICommand
     {
+        public event Action<Exception> OnException;
         public event EventHandler CanExecuteChanged;
+
 
         public virtual bool CanExecute(object parameter) => true;
 
@@ -16,9 +18,9 @@ namespace MyRevitViewModels
             {
                 TryExecute(parameter);
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                //todo?
+                OnException?.Invoke(e);
             }
         }
 
