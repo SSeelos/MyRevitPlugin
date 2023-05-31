@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using MyRevitViewModels;
+using Serilog;
 
 namespace MyRevitViews
 {
@@ -21,7 +22,7 @@ namespace MyRevitViews
 
             builder.RegisterType<MainV>().SingleInstance();
             builder.RegisterType<MainVM>().SingleInstance();
-
+            builder.Register(c => Log.Logger).As<ILogger>().SingleInstance();
             _autofacContainer = builder.Build();
 
             return _autofacContainer;

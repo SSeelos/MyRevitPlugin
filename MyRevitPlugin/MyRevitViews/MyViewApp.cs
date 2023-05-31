@@ -1,5 +1,6 @@
 ﻿using Autodesk.Revit.Attributes;
 using Autodesk.Revit.UI;
+using Autofac;
 using MyRevitViewModels;
 using Nice3point.Revit.Toolkit.External;
 using Serilog;
@@ -21,16 +22,18 @@ namespace MyRevitViews
             //IContainer c = builder.Build();
             //c.Resolve<MainV>().Show();
 
-            ILogger logger = new LoggerConfiguration()
+            Log.Logger = new LoggerConfiguration()
                 .WriteTo.Debug()
                 .WriteTo.Sink<RevitSink>()
                 .WriteTo.WPFTextblockSink()
                 .WriteTo.RevitErrorFileSink($"{Application.CurrentUsersDataFolderPath}\\logs\\myRevitPluginErrorLog.txt")
                 .CreateLogger();
 
+            AutofacConfig.BuildContainer();
+            AutofacConfig.AutofacContainer.Resolve<MainV>().Show();
 
-            var main = new MainV(new MainVM(logger));
-            main.Show();
+            //var main = new MainV(new MainVM(logger));
+            //main.Show();
         }
     }
 }
