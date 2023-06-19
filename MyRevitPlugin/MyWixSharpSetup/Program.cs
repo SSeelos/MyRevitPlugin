@@ -14,8 +14,9 @@ namespace MyWixSharpSetup
             //project.OutDir = "<output dir path>";
 
             //todo install files
-            project.BuildMSI_Revit(InstallScope.perUser, new File(""));
-            project.BuildMSI_Revit(InstallScope.perMachine, new File(""));
+            var installFile = new Dir("MyDir", new File(@"MyFolder\MyFile.cs"));
+            project.BuildMSI_Revit(InstallScope.perUser, installFile);
+            project.BuildMSI_Revit(InstallScope.perMachine, installFile);
         }
     }
 }
