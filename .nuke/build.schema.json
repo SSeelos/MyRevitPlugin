@@ -72,9 +72,10 @@
           "items": {
             "type": "string",
             "enum": [
+              "Announce",
               "Clean",
               "Compile",
-              "Restore"
+              "Publish"
             ]
           }
         },
@@ -88,9 +89,10 @@
           "items": {
             "type": "string",
             "enum": [
+              "Announce",
               "Clean",
               "Compile",
-              "Restore"
+              "Publish"
             ]
           }
         },
