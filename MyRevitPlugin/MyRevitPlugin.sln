@@ -13,12 +13,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRevitExtensions", "MyRevi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWixSharpSetup", "MyWixSharpSetup\MyWixSharpSetup.csproj", "{162814A2-3A7D-4CD3-B99E-C899B988C4E3}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyNukeBuild", "MyNukeBuild\MyNukeBuild.csproj", "{A5993CF8-EBA4-41A5-8D6F-52F4C1D3695E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5993CF8-EBA4-41A5-8D6F-52F4C1D3695E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5993CF8-EBA4-41A5-8D6F-52F4C1D3695E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49F00F3D-9F64-47DE-A55B-5BD571D31531}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{49F00F3D-9F64-47DE-A55B-5BD571D31531}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49F00F3D-9F64-47DE-A55B-5BD571D31531}.Release|Any CPU.ActiveCfg = Release|Any CPU
