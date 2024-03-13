@@ -35,6 +35,6 @@ Set command line arguments (.proj):
 Set PreBuildEvent (.proj):
 ```
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="mkdir -p &quot;C:\tmp&quot;&#xD;&#xA;copy &quot;$(SolutionDir)\Resources\DebugProject.rvt&quot; &quot;C:\Debug\DebugProject.rvt&quot;" />
+    <Exec Command="mkdir -p &quot;C:\Debug&quot;&#xD;&#xA;copy &quot;$(SolutionDir)\Resources\DebugProject.rvt&quot; &quot;C:\Debug\DebugProject.rvt&quot;" />
   </Target>
 ```
