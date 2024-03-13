@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Revit23": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files\\Autodesk\\Revit 2023\\Revit.exe",
+      "commandLineArgs": "/nosplash"
+    }
+  }
+}
