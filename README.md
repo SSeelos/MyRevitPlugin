@@ -27,8 +27,14 @@ Set Start external program to
 C:\Program Files\Autodesk\Revit {VERSION}\Revit.exe
 ```
 (optional)
-Set command line arguments:
+Set command line arguments (.proj):
 ```
 /nosplash
 ..\MyDebugProject.rvt
+```
+Set PreBuildEvent (.proj):
+```
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="mkdir -p &quot;C:\Debug&quot;&#xD;&#xA;copy &quot;$(SolutionDir)\Resources\DebugProject.rvt&quot; &quot;C:\Debug\DebugProject.rvt&quot;" />
+  </Target>
 ```
