@@ -35,6 +35,8 @@ C:\Debug\DebugProject.rvt
 Set PreBuildEvent (.proj):
 ```
 	<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-		<Exec Command="mkdir &quot;C:\Debug&quot;&#xD;&#xA;copy &quot;$(SolutionDir)\Resources\DebugProject.rvt&quot; &quot;C:\Debug\DebugProject.rvt&quot;&#xD;&#xA;copy &quot;$(SolutionDir)\Resources\DebugHrRevitAddin.addin&quot; &quot;$(OutDir)\..\..&quot;" />
+		<Exec Command="mkdir &quot;C:\Debug&quot;
+			&#xD;&#xA;copy &quot;$(SolutionDir)\Resources\DebugProject.rvt&quot;&quot;C:\Debug\DebugProject.rvt&quot;
+			&#xD;&#xA;copy &quot;$(SolutionDir)\Resources\HrRevitAppDebug.addin&quot; &quot;$(OutDir)\..\..&quot;" />
 	</Target>
 ```
