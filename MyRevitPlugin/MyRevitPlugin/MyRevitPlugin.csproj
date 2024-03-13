@@ -63,7 +63,6 @@
   <ItemGroup>
     <Compile Include="Extenisons\MyRibbonPanelExt.cs" />
     <Compile Include="ExternalApplications\MyExternalApp.cs" />
-    <Compile Include="ExternalApplications\MyNice3pointApplication.cs" />
     <Compile Include="ExternalApplications\MyThrowingApp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,6 +1,5 @@
 ﻿using Autodesk.Revit.Attributes;
 using Autodesk.Revit.DB.Macros;
-using Autodesk.Revit.UI;
 
 namespace MyRevitPlugin
 {
@@ -11,12 +10,8 @@ namespace MyRevitPlugin
     {
         protected override void TryOnStartup()
         {
-            var app = this.UIControlledApplication.GetUIApplication().Application;
-            TaskDialog.Show(GetType().FullName, $"Hello {app.Username}");
-
             MyRibbonPanelExt.MyRibbonPanel(this.UIControlledApplication);
             MyRibbonPanelExt.DebugPanel(this.UIControlledApplication);
-
         }
     }
 }

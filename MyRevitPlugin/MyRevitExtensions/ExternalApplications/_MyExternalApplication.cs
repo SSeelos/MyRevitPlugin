@@ -6,6 +6,8 @@ namespace MyRevitPlugin
     public abstract class _MyExternalApplication : IExternalApplication
     {
         protected UIControlledApplication UIControlledApplication { get; private set; }
+        protected UIApplication UIApplication
+            => this.UIControlledApplication.GetUIApplication();
         protected abstract void TryOnStartup();
         public Result OnStartup(UIControlledApplication application)
         {
