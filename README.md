@@ -30,11 +30,11 @@ C:\Program Files\Autodesk\Revit {VERSION}\Revit.exe
 Set command line arguments (.proj):
 ```
 /nosplash
-..\MyDebugProject.rvt
+C:\Debug\DebugProject.rvt
 ```
 Set PreBuildEvent (.proj):
 ```
-  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="mkdir -p &quot;C:\Debug&quot;&#xD;&#xA;copy &quot;$(SolutionDir)\Resources\DebugProject.rvt&quot; &quot;C:\Debug\DebugProject.rvt&quot;" />
-  </Target>
+	<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+		<Exec Command="mkdir &quot;C:\Debug&quot;&#xD;&#xA;copy &quot;$(SolutionDir)\Resources\DebugProject.rvt&quot; &quot;C:\Debug\DebugProject.rvt&quot;&#xD;&#xA;copy &quot;$(SolutionDir)\Resources\DebugHrRevitAddin.addin&quot; &quot;$(OutDir)\..\..&quot;" />
+	</Target>
 ```
