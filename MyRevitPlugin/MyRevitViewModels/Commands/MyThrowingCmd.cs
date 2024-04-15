@@ -11,11 +11,11 @@
 
         private void LogException(System.Exception exception)
         {
-            this.observable.Logger.Error(exception, "Error from MyCommand_MainVM");
+            this.observable.Logger.Error(exception.Message);
         }
         protected override void TryExecute(object parameter)
         {
-            throw new System.NotImplementedException();
+            throw new System.Exception("you done fucked up!");
         }
     }
 }

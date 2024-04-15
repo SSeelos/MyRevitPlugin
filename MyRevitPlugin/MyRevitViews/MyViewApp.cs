@@ -13,23 +13,17 @@ namespace MyRevitViews
         {
             TaskDialog.Show(this.GetType().FullName, $"Hello {Application.Username}");
 
-            //var builder = new ContainerBuilder();
-
-            //builder.RegisterType<MainV>().SingleInstance();
-            //builder.RegisterType<MainVM>().SingleInstance();
-
-            //IContainer c = builder.Build();
-            //c.Resolve<MainV>().Show();
-
-            ILogger logger = new LoggerConfiguration()
+            Log.Logger = new LoggerConfiguration()
                 .WriteTo.Debug()
                 .WriteTo.Sink<RevitSink>()
                 .WriteTo.WPFTextblockSink()
                 .WriteTo.RevitErrorFileSink($"{Application.CurrentUsersDataFolderPath}\\logs\\myRevitPluginErrorLog.txt")
                 .CreateLogger();
 
+            //IContainer container = AutofacConfig.BuildContainer();
+            //container.Resolve<MainV>().Show();
 
-            var main = new MainV(new MainVM(logger));
+            var main = new MainV(new MainVM(Log.Logger));
             main.Show();
         }
     }

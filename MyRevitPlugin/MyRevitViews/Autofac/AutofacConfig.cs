@@ -1,17 +1,18 @@
 ﻿using Autofac;
 using MyRevitViewModels;
+using Serilog;
 
 namespace MyRevitViews
 {
     public static class AutofacConfig
     {
-        private static IContainer _autofacContainer;
-        public static IContainer AutofacContainer
+        private static IContainer _container;
+        public static IContainer Container
         {
             get
             {
-                _autofacContainer = _autofacContainer ?? BuildContainer();
-                return _autofacContainer;
+                _container = _container ?? BuildContainer();
+                return _container;
             }
         }
 
@@ -21,10 +22,10 @@ namespace MyRevitViews
 
             builder.RegisterType<MainV>().SingleInstance();
             builder.RegisterType<MainVM>().SingleInstance();
+            builder.Register(c => Log.Logger).As<ILogger>().SingleInstance();
+            _container = builder.Build();
 
-            _autofacContainer = builder.Build();
-
-            return _autofacContainer;
+            return _container;
         }
     }
 }

@@ -19,21 +19,21 @@ namespace MyRevitViewModels
 
         public void Emit(LogEvent logEvent)
         {
-            if (logEvent.Level >= LogEventLevel.Error)
+            if (logEvent.Level < LogEventLevel.Error)
+                return;
+
+            string message = $"{logEvent.RenderMessage()}";
+            using (StringWriter writer = new StringWriter())
             {
-                string message = $"{logEvent.RenderMessage()}";
-                using (StringWriter writer = new StringWriter())
-                {
-                    _textFormatter.Format(logEvent, writer);
-                    message = $"{writer.ToString()}\n";
-                }
-                string directory = Path.GetDirectoryName(_logFilePath);
-                if (!Directory.Exists(directory))
-                {
-                    Directory.CreateDirectory(directory);
-                }
-                File.AppendAllText(_logFilePath, message);
+                _textFormatter.Format(logEvent, writer);
+                message = $"{writer.ToString()}\n";
             }
+            string directory = Path.GetDirectoryName(_logFilePath);
+            if (!Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+            File.AppendAllText(_logFilePath, message);
         }
     }
 }

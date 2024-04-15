@@ -1,0 +1,10 @@
+﻿<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>MyRevitPlugin</Name>
+    <Assembly>MyRevitPlugin/MyRevitPlugin.dll</Assembly>
+    <FullClassName>MyRevitPlugin.MyExternalApp</FullClassName>
+    <AddInId>994c47e3-ca96-4e97-83ba-8eab4e8dc2b0</AddInId>
+    <VendorId>SSeelos</VendorId>
+    <VendorDescription>Sebastian Seelos, Sebastian.Seelos@gmx.de</VendorDescription>
+  </AddIn>
+</RevitAddIns>

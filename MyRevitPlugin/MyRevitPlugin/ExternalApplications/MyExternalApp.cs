@@ -12,12 +12,8 @@ namespace MyRevitPlugin
         public const string AddInId = "994c47e3-ca96-4e97-83ba-8eab4e8dc2b0";
         protected override void TryOnStartup()
         {
-            var app = this.UIControlledApplication.GetUIApplication().Application;
-            TaskDialog.Show(GetType().FullName, $"Hello {app.Username}");
-
             MyRibbonPanelExt.MyRibbonPanel(this.UIControlledApplication);
             MyRibbonPanelExt.DebugPanel(this.UIControlledApplication);
-
         }
         public static AddIn AddIn => new Application()
         {

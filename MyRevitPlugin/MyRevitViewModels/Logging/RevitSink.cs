@@ -8,13 +8,13 @@ namespace MyRevitViewModels
     {
         public void Emit(LogEvent logEvent)
         {
-            var msg = logEvent.RenderMessage();
+            if (logEvent.Level != LogEventLevel.Error)
+                return;
+
             try
             {
-                if(logEvent.Level == LogEventLevel.Error)
-                {
-                    TaskDialog.Show(logEvent.Level.ToString(), msg);
-                }
+                var msg = logEvent.RenderMessage();
+                TaskDialog.Show(logEvent.Level.ToString(), msg);
             }
             catch
             {
