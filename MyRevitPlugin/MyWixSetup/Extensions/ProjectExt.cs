@@ -27,6 +27,8 @@ namespace MyWixSetup
             var addinManifest = AddInDef.GetAddIns($"{project.Scope.Value.ToMyRevitDir()}");
             var xml = addinManifest.SerializeXml();
             System.IO.File.WriteAllText($"{project.Name}.addin", xml);
+            var path = System.IO.Path.GetFullPath($"{project.Name}.addin");
+            Console.WriteLine($"{path}");
 
             var dirs = System.IO.Directory.GetDirectories(project.Scope.Value.ToRevitAddinsDir());
             Console.WriteLine("Revit Directories");

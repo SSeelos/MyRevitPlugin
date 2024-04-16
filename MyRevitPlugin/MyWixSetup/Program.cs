@@ -14,7 +14,9 @@ namespace MyWixSetup
                 {
                     GUID = new Guid("6fe30b47-2577-43ad-9095-1861ba25889b"),
                     Version = new Version("1.0.0.0"),
-                    UI = WUI.WixUI_Minimal
+                    BackgroundImage = @"Resources\MyBackground.png",
+                    BannerImage = @"Resources\MyBanner.png",
+                    LicenceFile = @"Resources\MyLicence.rtf",
                 };
 
                 //project.BuildRevitMsi(InstallScope.perUser);

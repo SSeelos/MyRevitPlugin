@@ -240,6 +240,10 @@
 
     <WixUI Id="WixUI_Minimal" xmlns="http://wixtoolset.org/schemas/v4/wxs/ui" />
 
+    <WixVariable Id="WixUIBannerBmp" Value="Resources\MyBanner.png" />
+    <WixVariable Id="WixUIDialogBmp" Value="Resources\MyBackground.png" />
+    <WixVariable Id="WixUILicenseRtf" Value="Resources\MyLicence.rtf" />
+
     <CustomAction Id="Set_DirAbsolutePath" Property="INSTALLDIR" Value="C:\ProgramData\My\Revit" />
     <CustomAction Id="Set_DirAbsolutePath1" Property="TARGETDIR2" Value="C:\ProgramData\Autodesk\Revit\Addins\2015" />
     <CustomAction Id="Set_DirAbsolutePath2" Property="TARGETDIR3" Value="C:\ProgramData\Autodesk\Revit\Addins\2016" />
