@@ -5,10 +5,8 @@ namespace MyRevitPlugin
 {
     public class MyRibbonPanelExt
     {
-
         public static RibbonPanel DebugPanel(UIControlledApplication application)
         {
-#if DEBUG
             RibbonPanel panel = application.CreateRibbonPanel(Tab.AddIns, nameof(MyRevitPlugin) + "(Debug)");
             PulldownButton button = panel.AddItem(new PulldownButtonData("myPulldownButton", "My" + nameof(PulldownButtonData))) as PulldownButton;
             button.AddPushButton<MyExternalCmd>();
@@ -21,8 +19,6 @@ namespace MyRevitPlugin
             //var ribbonControl = (RevitRibbonControl)ComponentManager.Ribbon;
             //if (ribbonControl.FindTab("Debug") is null)
             //    ribbonControl.Tabs.Add(ribbonControl.DebugTab);
-
-#endif
         }
         public static RibbonPanel MyRibbonPanel(UIControlledApplication application)
         {

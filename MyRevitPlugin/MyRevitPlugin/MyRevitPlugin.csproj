@@ -10,6 +10,9 @@
     <OutputPath>C:\ProgramData\Autodesk\Revit\Addins\2023\MyRevitPlugin</OutputPath>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+	</PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyRevitExtensions\MyRevitExtensions.csproj" />
     <ProjectReference Include="..\MyRevitViewModels\MyRevitViewModels.csproj" />
@@ -24,7 +27,7 @@
     <PackageReference Include="Nice3point.Revit.Toolkit" Version="2024.0.0" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>
-  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent" Condition="'$(Configuration)' == 'Debug'">
     <Exec Command="mkdir &quot;C:\Debug&quot;&#xD;&#xA;			&#xD;&#xA;copy &quot;$(SolutionDir)\Resources\DebugProject.rvt&quot; &quot;C:\Debug\DebugProject.rvt&quot;&#xD;&#xA;			&#xD;&#xA;copy &quot;$(SolutionDir)\Resources\MyAddinManifest.addin&quot; &quot;$(OutDir)\..&quot;" />
   </Target>
 </Project>

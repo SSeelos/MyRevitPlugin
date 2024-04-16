@@ -11,13 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRevitViews", "MyRevitView
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRevitExtensions", "MyRevitExtensions\MyRevitExtensions.csproj", "{E2052F1F-E67D-4B90-9236-B9BB4C52093D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyWixSharpSetup", "MyWixSharpSetup\MyWixSharpSetup.csproj", "{162814A2-3A7D-4CD3-B99E-C899B988C4E3}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyNukeBuild", "MyNukeBuild\MyNukeBuild.csproj", "{A5993CF8-EBA4-41A5-8D6F-52F4C1D3695E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject", "TestProject\TestProject.csproj", "{B83E259B-204F-43E9-8D30-1CAED6B72B5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWixSetup", "MyWixSetup\MyWixSetup.csproj", "{F10D70F0-4779-4850-ACEA-E718E7C6A7B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyWixSetup", "MyWixSetup\MyWixSetup.csproj", "{F10D70F0-4779-4850-ACEA-E718E7C6A7B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +39,6 @@ Global
 		{E2052F1F-E67D-4B90-9236-B9BB4C52093D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2052F1F-E67D-4B90-9236-B9BB4C52093D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2052F1F-E67D-4B90-9236-B9BB4C52093D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{162814A2-3A7D-4CD3-B99E-C899B988C4E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{162814A2-3A7D-4CD3-B99E-C899B988C4E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{162814A2-3A7D-4CD3-B99E-C899B988C4E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{162814A2-3A7D-4CD3-B99E-C899B988C4E3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A5993CF8-EBA4-41A5-8D6F-52F4C1D3695E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A5993CF8-EBA4-41A5-8D6F-52F4C1D3695E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B83E259B-204F-43E9-8D30-1CAED6B72B5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

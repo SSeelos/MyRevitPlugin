@@ -1,45 +1,32 @@
-﻿using MyRevitExtensions.AddInFile;
-using MyRevitPlugin;
-using MyWixSharpSetup;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 using WixSharp;
 
 namespace MyWixSetup
 {
-    internal class Program
+    class Program
     {
-        static void Main()
+        public static int Main()
         {
-
-            var project = new Project(nameof(MyRevitPlugin))
+#if !DEBUG
+            try
             {
-                GUID = new Guid("6fe30b47-2577-43ad-9095-1861ba25889b")
-            };
-            //project.SourceBaseDir = "<input dir path>";
-            //project.OutDir = "<output dir path>";
-
-            //todo install files
-            var installFile = new Dir("MyDir", new File(@"MyFolder\MyFile.cs"));
-
-            var addinManifest = new RevitAddIns()
-            {
-                AddIns = new List<AddIn>()
+                var project = new Project(nameof(MyRevitPlugin))
                 {
-                    MyExternalApp.AddIn
-                }
-            };
-            var xml = addinManifest.SerializeXml();
-            System.IO.File.WriteAllText("addinManifest.xml", xml);
+                    GUID = new Guid("6fe30b47-2577-43ad-9095-1861ba25889b"),
+                    Version = new Version("1.0.0.0"),
+                    UI = WUI.WixUI_Minimal
+                };
 
-            var addinsFile = new File("addinManifest.xml");
-            project.SetAddinManifest(InstallScope.perUser, addinsFile);
-            project.Dirs.Append(installFile);
-            project.BuildMsi();
-            project.SetAddinManifest(InstallScope.perMachine, addinsFile);
-            project.Dirs.Append(installFile);
-            project.BuildMsi();
+                //project.BuildRevitMsi(InstallScope.perUser);
+                project.BuildRevitMsi(InstallScope.perMachine);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return 1;
+            }
+            return 0;
+#endif
         }
     }
 }
