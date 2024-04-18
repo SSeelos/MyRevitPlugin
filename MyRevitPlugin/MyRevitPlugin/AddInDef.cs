@@ -10,10 +10,10 @@ namespace MyRevitPlugin
             {
                 AddIns = new List<AddIn>()
                 {
-                    GetAddIn(directory)
+                    GetApp(directory)
                 }
             };
-        public static AddIn GetAddIn(string directory = null)
+        public static AddIn GetApp(string directory = null)
             => new Application()
             {
                 Name = nameof(MyExternalApp),

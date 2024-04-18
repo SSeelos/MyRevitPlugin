@@ -6,338 +6,389 @@
     To suppress generation of this file remove `set ide=true` from the PostBuildEvent of the VS project
 </auto-generated>
 -->
-  <Package Compressed="yes" ProductCode="6fe30b47-2577-43ad-9095-1861ca25889c" Name="MyRevitPlugin" Language="1033" Version="1.0.0.0" UpgradeCode="6fe30b47-2577-43ad-9095-1861ba25889b" Manufacturer="sse" Scope="perMachine" InstallerVersion="200">
+  <Package Compressed="yes" ProductCode="6fe30b47-2577-43ad-9095-1861ca25889c" Name="MyRevitPlugin_Debug" Language="1033" Version="1.0.0.0" UpgradeCode="6fe30b47-2577-43ad-9095-1861ba25889b" Manufacturer="MyCompany" Scope="perUser" InstallerVersion="200">
     <SummaryInformation Codepage="Windows-1252" />
-    <Media Id="1" Cabinet="MyRevitPlugin.cab" EmbedCab="yes" />
+    <Media Id="1" Cabinet="MyRevitPlugin_Debug.cab" EmbedCab="yes" />
+
+    <StandardDirectory Id="AppDataFolder">
+      <Directory Id="My" Name="My">
+        <Directory Id="Revit" Name="Revit">
+          <Directory Id="INSTALLDIR" Name="MyRevitPlugin_Debug">
+
+            <Component Id="Component.CommunityToolkit.Mvvm.dll_3956473251" Guid="6fe30b47-2577-43ad-9095-1861a6773b3b">
+              <File Id="CommunityToolkit.Mvvm.dll_3956473251" Source="..\MyRevitPlugin\bin\Release\CommunityToolkit.Mvvm.dll" />
+              <RemoveFolder Id="INSTALLDIR" On="uninstall" />
+
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-    <Directory Id="INSTALLDIR" Name="ABSOLUTEPATH">
+            <Component Id="Component.CommunityToolkit.Mvvm.pdb_1955659163" Guid="6fe30b47-2577-43ad-9095-186148665b3c">
+              <File Id="CommunityToolkit.Mvvm.pdb_1955659163" Source="..\MyRevitPlugin\bin\Release\CommunityToolkit.Mvvm.pdb" />
+
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.CommunityToolkit.Mvvm.dll_2016966641" Guid="6fe30b47-2577-43ad-9095-18615dd7af7b">
-        <File Id="CommunityToolkit.Mvvm.dll_2016966641" Source="..\MyRevitPlugin\bin\Release\CommunityToolkit.Mvvm.dll" />
-      </Component>
+            <Component Id="Component.CommunityToolkit.Mvvm.xml_3484876196" Guid="6fe30b47-2577-43ad-9095-1861ed74f097">
+              <File Id="CommunityToolkit.Mvvm.xml_3484876196" Source="..\MyRevitPlugin\bin\Release\CommunityToolkit.Mvvm.xml" />
+
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.CommunityToolkit.Mvvm.pdb_3525678083" Guid="6fe30b47-2577-43ad-9095-186143dac7bc">
-        <File Id="CommunityToolkit.Mvvm.pdb_3525678083" Source="..\MyRevitPlugin\bin\Release\CommunityToolkit.Mvvm.pdb" />
-      </Component>
+            <Component Id="Component.JetBrains.Annotations.dll_2355680511" Guid="6fe30b47-2577-43ad-9095-1861dfe02aef">
+              <File Id="JetBrains.Annotations.dll_2355680511" Source="..\MyRevitPlugin\bin\Release\JetBrains.Annotations.dll" />
+
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.CommunityToolkit.Mvvm.xml_2360143669" Guid="6fe30b47-2577-43ad-9095-186148b0a103">
-        <File Id="CommunityToolkit.Mvvm.xml_2360143669" Source="..\MyRevitPlugin\bin\Release\CommunityToolkit.Mvvm.xml" />
-      </Component>
+            <Component Id="Component.Microsoft.Bcl.AsyncInterfaces.dll_691028777" Guid="6fe30b47-2577-43ad-9095-186196c0df33">
+              <File Id="Microsoft.Bcl.AsyncInterfaces.dll_691028777" Source="..\MyRevitPlugin\bin\Release\Microsoft.Bcl.AsyncInterfaces.dll" />
+
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.JetBrains.Annotations.dll_1667585502" Guid="6fe30b47-2577-43ad-9095-1861ad6744c2">
-        <File Id="JetBrains.Annotations.dll_1667585502" Source="..\MyRevitPlugin\bin\Release\JetBrains.Annotations.dll" />
-      </Component>
+            <Component Id="Component.Microsoft.Bcl.AsyncInterfaces.xml_4221322026" Guid="6fe30b47-2577-43ad-9095-1861e959975a">
+              <File Id="Microsoft.Bcl.AsyncInterfaces.xml_4221322026" Source="..\MyRevitPlugin\bin\Release\Microsoft.Bcl.AsyncInterfaces.xml" />
+
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.Microsoft.Bcl.AsyncInterfaces.dll_1106543536" Guid="6fe30b47-2577-43ad-9095-18610c4769ba">
-        <File Id="Microsoft.Bcl.AsyncInterfaces.dll_1106543536" Source="..\MyRevitPlugin\bin\Release\Microsoft.Bcl.AsyncInterfaces.dll" />
-      </Component>
+            <Component Id="Component.MyRevitExtensions.dll_1738222007" Guid="6fe30b47-2577-43ad-9095-1861c1188b00">
+              <File Id="MyRevitExtensions.dll_1738222007" Source="..\MyRevitPlugin\bin\Release\MyRevitExtensions.dll" />
+
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.Microsoft.Bcl.AsyncInterfaces.xml_50905788" Guid="6fe30b47-2577-43ad-9095-18610f86f610">
-        <File Id="Microsoft.Bcl.AsyncInterfaces.xml_50905788" Source="..\MyRevitPlugin\bin\Release\Microsoft.Bcl.AsyncInterfaces.xml" />
-      </Component>
+            <Component Id="Component.MyRevitExtensions.pdb_3738511807" Guid="6fe30b47-2577-43ad-9095-1861ad34676d">
+              <File Id="MyRevitExtensions.pdb_3738511807" Source="..\MyRevitPlugin\bin\Release\MyRevitExtensions.pdb" />
+
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.MyRevitExtensions.dll_1037195606" Guid="6fe30b47-2577-43ad-9095-1861a9a500ba">
-        <File Id="MyRevitExtensions.dll_1037195606" Source="..\MyRevitPlugin\bin\Release\MyRevitExtensions.dll" />
-      </Component>
+            <Component Id="Component.MyRevitPlugin.dll_3671992637" Guid="6fe30b47-2577-43ad-9095-18619c3c985d">
+              <File Id="MyRevitPlugin.dll_3671992637" Source="..\MyRevitPlugin\bin\Release\MyRevitPlugin.dll" />
+
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.MyRevitExtensions.pdb_2545907056" Guid="6fe30b47-2577-43ad-9095-1861d98bdd14">
-        <File Id="MyRevitExtensions.pdb_2545907056" Source="..\MyRevitPlugin\bin\Release\MyRevitExtensions.pdb" />
-      </Component>
+            <Component Id="Component.MyRevitPlugin.dll.config_2832300400" Guid="6fe30b47-2577-43ad-9095-1861958c7796">
+              <File Id="MyRevitPlugin.dll.config_2832300400" Source="..\MyRevitPlugin\bin\Release\MyRevitPlugin.dll.config" />
+
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.MyRevitPlugin.dll_2875266749" Guid="6fe30b47-2577-43ad-9095-1861e08377ec">
-        <File Id="MyRevitPlugin.dll_2875266749" Source="..\MyRevitPlugin\bin\Release\MyRevitPlugin.dll" />
-      </Component>
+            <Component Id="Component.MyRevitPlugin.pdb_3200002373" Guid="6fe30b47-2577-43ad-9095-1861e4b2b984">
+              <File Id="MyRevitPlugin.pdb_3200002373" Source="..\MyRevitPlugin\bin\Release\MyRevitPlugin.pdb" />
+
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.MyRevitPlugin.dll.config_3309824699" Guid="6fe30b47-2577-43ad-9095-18616f459139">
-        <File Id="MyRevitPlugin.dll.config_3309824699" Source="..\MyRevitPlugin\bin\Release\MyRevitPlugin.dll.config" />
-      </Component>
+            <Component Id="Component.MyRevitViewModels.dll_2749658491" Guid="6fe30b47-2577-43ad-9095-186170cc9402">
+              <File Id="MyRevitViewModels.dll_2749658491" Source="..\MyRevitPlugin\bin\Release\MyRevitViewModels.dll" />
+
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.MyRevitPlugin.pdb_1366555299" Guid="6fe30b47-2577-43ad-9095-1861b7a91056">
-        <File Id="MyRevitPlugin.pdb_1366555299" Source="..\MyRevitPlugin\bin\Release\MyRevitPlugin.pdb" />
-      </Component>
+            <Component Id="Component.MyRevitViewModels.dll.config_1025864464" Guid="6fe30b47-2577-43ad-9095-1861b1924984">
+              <File Id="MyRevitViewModels.dll.config_1025864464" Source="..\MyRevitPlugin\bin\Release\MyRevitViewModels.dll.config" />
+
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.MyRevitViewModels.dll_1845075952" Guid="6fe30b47-2577-43ad-9095-186109bf7b2a">
-        <File Id="MyRevitViewModels.dll_1845075952" Source="..\MyRevitPlugin\bin\Release\MyRevitViewModels.dll" />
-      </Component>
+            <Component Id="Component.MyRevitViewModels.pdb_2277406067" Guid="6fe30b47-2577-43ad-9095-1861b7447b51">
+              <File Id="MyRevitViewModels.pdb_2277406067" Source="..\MyRevitPlugin\bin\Release\MyRevitViewModels.pdb" />
+
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.MyRevitViewModels.dll.config_258713510" Guid="6fe30b47-2577-43ad-9095-18615f3216ab">
-        <File Id="MyRevitViewModels.dll.config_258713510" Source="..\MyRevitPlugin\bin\Release\MyRevitViewModels.dll.config" />
-      </Component>
+            <Component Id="Component.MyRevitViews.dll_231748067" Guid="6fe30b47-2577-43ad-9095-18612aad5674">
+              <File Id="MyRevitViews.dll_231748067" Source="..\MyRevitPlugin\bin\Release\MyRevitViews.dll" />
+
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.MyRevitViewModels.pdb_1572635598" Guid="6fe30b47-2577-43ad-9095-186167c32ab9">
-        <File Id="MyRevitViewModels.pdb_1572635598" Source="..\MyRevitPlugin\bin\Release\MyRevitViewModels.pdb" />
-      </Component>
+            <Component Id="Component.MyRevitViews.dll.config_2603940082" Guid="6fe30b47-2577-43ad-9095-18615e711626">
+              <File Id="MyRevitViews.dll.config_2603940082" Source="..\MyRevitPlugin\bin\Release\MyRevitViews.dll.config" />
+
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.MyRevitViews.dll_1206675701" Guid="6fe30b47-2577-43ad-9095-18617fe85749">
-        <File Id="MyRevitViews.dll_1206675701" Source="..\MyRevitPlugin\bin\Release\MyRevitViews.dll" />
-      </Component>
+            <Component Id="Component.MyRevitViews.pdb_504188421" Guid="6fe30b47-2577-43ad-9095-18614ec9e829">
+              <File Id="MyRevitViews.pdb_504188421" Source="..\MyRevitPlugin\bin\Release\MyRevitViews.pdb" />
+
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.MyRevitViews.dll.config_1707011730" Guid="6fe30b47-2577-43ad-9095-1861f86f8d24">
-        <File Id="MyRevitViews.dll.config_1707011730" Source="..\MyRevitPlugin\bin\Release\MyRevitViews.dll.config" />
-      </Component>
+            <Component Id="Component.Nice3point.Revit.Extensions.dll_3706584554" Guid="6fe30b47-2577-43ad-9095-1861c065db0f">
+              <File Id="Nice3point.Revit.Extensions.dll_3706584554" Source="..\MyRevitPlugin\bin\Release\Nice3point.Revit.Extensions.dll" />
+
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.MyRevitViews.pdb_1996669981" Guid="6fe30b47-2577-43ad-9095-1861093c4c52">
-        <File Id="MyRevitViews.pdb_1996669981" Source="..\MyRevitPlugin\bin\Release\MyRevitViews.pdb" />
-      </Component>
+            <Component Id="Component.Nice3point.Revit.Toolkit.dll_200097035" Guid="6fe30b47-2577-43ad-9095-1861bc435180">
+              <File Id="Nice3point.Revit.Toolkit.dll_200097035" Source="..\MyRevitPlugin\bin\Release\Nice3point.Revit.Toolkit.dll" />
+
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.Nice3point.Revit.Extensions.dll_2482311304" Guid="6fe30b47-2577-43ad-9095-18615a3f3dd2">
-        <File Id="Nice3point.Revit.Extensions.dll_2482311304" Source="..\MyRevitPlugin\bin\Release\Nice3point.Revit.Extensions.dll" />
-      </Component>
+            <Component Id="Component.Serilog.dll_2276841983" Guid="6fe30b47-2577-43ad-9095-1861a4dd1ed8">
+              <File Id="Serilog.dll_2276841983" Source="..\MyRevitPlugin\bin\Release\Serilog.dll" />
+
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.Nice3point.Revit.Toolkit.dll_2443494728" Guid="6fe30b47-2577-43ad-9095-186131f934fb">
-        <File Id="Nice3point.Revit.Toolkit.dll_2443494728" Source="..\MyRevitPlugin\bin\Release\Nice3point.Revit.Toolkit.dll" />
-      </Component>
+            <Component Id="Component.Serilog.Sinks.Debug.dll_2549883592" Guid="6fe30b47-2577-43ad-9095-1861214f6cf6">
+              <File Id="Serilog.Sinks.Debug.dll_2549883592" Source="..\MyRevitPlugin\bin\Release\Serilog.Sinks.Debug.dll" />
+
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.Serilog.dll_1656815965" Guid="6fe30b47-2577-43ad-9095-1861264410e7">
-        <File Id="Serilog.dll_1656815965" Source="..\MyRevitPlugin\bin\Release\Serilog.dll" />
-      </Component>
+            <Component Id="Component.Serilog.Sinks.Debug.xml_4115705389" Guid="6fe30b47-2577-43ad-9095-186133a2a9ae">
+              <File Id="Serilog.Sinks.Debug.xml_4115705389" Source="..\MyRevitPlugin\bin\Release\Serilog.Sinks.Debug.xml" />
+
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.Serilog.Sinks.Debug.dll_1280275990" Guid="6fe30b47-2577-43ad-9095-1861ff275aa7">
-        <File Id="Serilog.Sinks.Debug.dll_1280275990" Source="..\MyRevitPlugin\bin\Release\Serilog.Sinks.Debug.dll" />
-      </Component>
+            <Component Id="Component.Serilog.xml_3842139492" Guid="6fe30b47-2577-43ad-9095-186169e45773">
+              <File Id="Serilog.xml_3842139492" Source="..\MyRevitPlugin\bin\Release\Serilog.xml" />
 
-      <Component Id="Component.Serilog.Sinks.Debug.xml_1280210466" Guid="6fe30b47-2577-43ad-9095-18613b5443e6">
-        <File Id="Serilog.Sinks.Debug.xml_1280210466" Source="..\MyRevitPlugin\bin\Release\Serilog.Sinks.Debug.xml" />
-      </Component>
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.Serilog.xml_1656881481" Guid="6fe30b47-2577-43ad-9095-1861d099165c">
-        <File Id="Serilog.xml_1656881481" Source="..\MyRevitPlugin\bin\Release\Serilog.xml" />
-      </Component>
+            <Component Id="Component.System.Buffers.dll_3977900418" Guid="6fe30b47-2577-43ad-9095-1861c79dd6c4">
+              <File Id="System.Buffers.dll_3977900418" Source="..\MyRevitPlugin\bin\Release\System.Buffers.dll" />
 
-      <Component Id="Component.System.Buffers.dll_2887318175" Guid="6fe30b47-2577-43ad-9095-18616381de75">
-        <File Id="System.Buffers.dll_2887318175" Source="..\MyRevitPlugin\bin\Release\System.Buffers.dll" />
-      </Component>
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.System.Buffers.xml_3651992224" Guid="6fe30b47-2577-43ad-9095-186113dd20e3">
-        <File Id="System.Buffers.xml_3651992224" Source="..\MyRevitPlugin\bin\Release\System.Buffers.xml" />
-      </Component>
+            <Component Id="Component.System.Buffers.xml_3977965950" Guid="6fe30b47-2577-43ad-9095-1861a14983d8">
+              <File Id="System.Buffers.xml_3977965950" Source="..\MyRevitPlugin\bin\Release\System.Buffers.xml" />
 
-      <Component Id="Component.System.ComponentModel.Annotations.dll_1280228717" Guid="6fe30b47-2577-43ad-9095-1861861fb27d">
-        <File Id="System.ComponentModel.Annotations.dll_1280228717" Source="..\MyRevitPlugin\bin\Release\System.ComponentModel.Annotations.dll" />
-      </Component>
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.System.Memory.dll_1472523357" Guid="6fe30b47-2577-43ad-9095-1861cb6ad1bc">
-        <File Id="System.Memory.dll_1472523357" Source="..\MyRevitPlugin\bin\Release\System.Memory.dll" />
-      </Component>
+            <Component Id="Component.System.ComponentModel.Annotations.dll_2621642357" Guid="6fe30b47-2577-43ad-9095-1861dc7d3f56">
+              <File Id="System.ComponentModel.Annotations.dll_2621642357" Source="..\MyRevitPlugin\bin\Release\System.ComponentModel.Annotations.dll" />
 
-      <Component Id="Component.System.Memory.xml_416885609" Guid="6fe30b47-2577-43ad-9095-18617f29fb28">
-        <File Id="System.Memory.xml_416885609" Source="..\MyRevitPlugin\bin\Release\System.Memory.xml" />
-      </Component>
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.System.Numerics.Vectors.dll_3892281862" Guid="6fe30b47-2577-43ad-9095-18615fa928a5">
-        <File Id="System.Numerics.Vectors.dll_3892281862" Source="..\MyRevitPlugin\bin\Release\System.Numerics.Vectors.dll" />
-      </Component>
+            <Component Id="Component.System.Memory.dll_2422641196" Guid="6fe30b47-2577-43ad-9095-1861b978430b">
+              <File Id="System.Memory.dll_2422641196" Source="..\MyRevitPlugin\bin\Release\System.Memory.dll" />
 
-      <Component Id="Component.System.Numerics.Vectors.xml_3892216354" Guid="6fe30b47-2577-43ad-9095-1861cc76dcd0">
-        <File Id="System.Numerics.Vectors.xml_3892216354" Source="..\MyRevitPlugin\bin\Release\System.Numerics.Vectors.xml" />
-      </Component>
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.System.Runtime.CompilerServices.Unsafe.dll_519215241" Guid="6fe30b47-2577-43ad-9095-1861def5b54a">
-        <File Id="System.Runtime.CompilerServices.Unsafe.dll_519215241" Source="..\MyRevitPlugin\bin\Release\System.Runtime.CompilerServices.Unsafe.dll" />
-      </Component>
+            <Component Id="Component.System.Memory.xml_421696045" Guid="6fe30b47-2577-43ad-9095-18612165037e">
+              <File Id="System.Memory.xml_421696045" Source="..\MyRevitPlugin\bin\Release\System.Memory.xml" />
 
-      <Component Id="Component.System.Runtime.CompilerServices.Unsafe.xml_990812298" Guid="6fe30b47-2577-43ad-9095-18618442aeaf">
-        <File Id="System.Runtime.CompilerServices.Unsafe.xml_990812298" Source="..\MyRevitPlugin\bin\Release\System.Runtime.CompilerServices.Unsafe.xml" />
-      </Component>
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.System.Threading.Tasks.Extensions.dll_1523178648" Guid="6fe30b47-2577-43ad-9095-186115f41116">
-        <File Id="System.Threading.Tasks.Extensions.dll_1523178648" Source="..\MyRevitPlugin\bin\Release\System.Threading.Tasks.Extensions.dll" />
-      </Component>
+            <Component Id="Component.System.Numerics.Vectors.dll_2251328537" Guid="6fe30b47-2577-43ad-9095-18610b22d2e9">
+              <File Id="System.Numerics.Vectors.dll_2251328537" Source="..\MyRevitPlugin\bin\Release\System.Numerics.Vectors.dll" />
 
-      <Component Id="Component.System.Threading.Tasks.Extensions.xml_441434236" Guid="6fe30b47-2577-43ad-9095-186132a40043">
-        <File Id="System.Threading.Tasks.Extensions.xml_441434236" Source="..\MyRevitPlugin\bin\Release\System.Threading.Tasks.Extensions.xml" />
-      </Component>
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-    </Directory>
+            <Component Id="Component.System.Numerics.Vectors.xml_3818198910" Guid="6fe30b47-2577-43ad-9095-186158dc88b1">
+              <File Id="System.Numerics.Vectors.xml_3818198910" Source="..\MyRevitPlugin\bin\Release\System.Numerics.Vectors.xml" />
 
-    <Directory Id="TARGETDIR2" Name="ABSOLUTEPATH1">
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.MyRevitPlugin.addin_494968174" Guid="6fe30b47-2577-43ad-9095-1861b0fb2615">
-        <File Id="MyRevitPlugin.addin_494968174" Source="MyRevitPlugin.addin" />
-      </Component>
+            <Component Id="Component.System.Runtime.CompilerServices.Unsafe.dll_717231331" Guid="6fe30b47-2577-43ad-9095-18611482e3d7">
+              <File Id="System.Runtime.CompilerServices.Unsafe.dll_717231331" Source="..\MyRevitPlugin\bin\Release\System.Runtime.CompilerServices.Unsafe.dll" />
 
-    </Directory>
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-    <Directory Id="TARGETDIR3" Name="ABSOLUTEPATH2">
+            <Component Id="Component.System.Runtime.CompilerServices.Unsafe.xml_717165775" Guid="6fe30b47-2577-43ad-9095-186196c4a437">
+              <File Id="System.Runtime.CompilerServices.Unsafe.xml_717165775" Source="..\MyRevitPlugin\bin\Release\System.Runtime.CompilerServices.Unsafe.xml" />
 
-      <Component Id="Component.MyRevitPlugin.addin_383892497" Guid="6fe30b47-2577-43ad-9095-18615caac78c">
-        <File Id="MyRevitPlugin.addin_383892497" Source="MyRevitPlugin.addin" />
-      </Component>
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-    </Directory>
+            <Component Id="Component.System.Threading.Tasks.Extensions.dll_3732242450" Guid="6fe30b47-2577-43ad-9095-1861a3983f05">
+              <File Id="System.Threading.Tasks.Extensions.dll_3732242450" Source="..\MyRevitPlugin\bin\Release\System.Threading.Tasks.Extensions.dll" />
 
-    <Directory Id="TARGETDIR4" Name="ABSOLUTEPATH3">
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-      <Component Id="Component.MyRevitPlugin.addin_341039804" Guid="6fe30b47-2577-43ad-9095-18619de76cc3">
-        <File Id="MyRevitPlugin.addin_341039804" Source="MyRevitPlugin.addin" />
-      </Component>
+            <Component Id="Component.System.Threading.Tasks.Extensions.xml_3260645393" Guid="6fe30b47-2577-43ad-9095-186151c23cd4">
+              <File Id="System.Threading.Tasks.Extensions.xml_3260645393" Source="..\MyRevitPlugin\bin\Release\System.Threading.Tasks.Extensions.xml" />
 
-    </Directory>
+              <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+                <RegistryValue Value="0" Type="string" KeyPath="yes" />
+              </RegistryKey>
+            </Component>
 
-    <Directory Id="TARGETDIR5" Name="ABSOLUTEPATH4">
+          </Directory>
 
-      <Component Id="Component.MyRevitPlugin.addin_302276839" Guid="6fe30b47-2577-43ad-9095-1861ad73eee7">
-        <File Id="MyRevitPlugin.addin_302276839" Source="MyRevitPlugin.addin" />
-      </Component>
+          <Component Id="Revit" Guid="6fe30b47-2577-43ad-9095-18618c5c330f">
+            <RemoveFolder Id="Revit" On="uninstall" />
 
-    </Directory>
+            <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+              <RegistryValue Value="0" Type="string" KeyPath="yes" />
+            </RegistryKey>
+          </Component>
 
-    <Directory Id="TARGETDIR6" Name="ABSOLUTEPATH5">
+        </Directory>
 
-      <Component Id="Component.MyRevitPlugin.addin_552434042" Guid="6fe30b47-2577-43ad-9095-186184a4ca04">
-        <File Id="MyRevitPlugin.addin_552434042" Source="MyRevitPlugin.addin" />
-      </Component>
+        <Component Id="My" Guid="6fe30b47-2577-43ad-9095-186188263f7e">
+          <RemoveFolder Id="My" On="uninstall" />
 
-    </Directory>
+          <RegistryKey Root="HKCU" Key="Software\WixSharp\Used">
+            <RegistryValue Value="0" Type="string" KeyPath="yes" />
+          </RegistryKey>
+        </Component>
 
-    <Directory Id="TARGETDIR7" Name="ABSOLUTEPATH6">
+      </Directory>
+    </StandardDirectory>
 
-      <Component Id="Component.MyRevitPlugin.addin_3833160478" Guid="6fe30b47-2577-43ad-9095-18617caa0768">
-        <File Id="MyRevitPlugin.addin_3833160478" Source="MyRevitPlugin.addin" />
-      </Component>
+    <UI />
 
-    </Directory>
-
-    <Directory Id="TARGETDIR8" Name="ABSOLUTEPATH7">
-
-      <Component Id="Component.MyRevitPlugin.addin_4089200785" Guid="6fe30b47-2577-43ad-9095-186145367de8">
-        <File Id="MyRevitPlugin.addin_4089200785" Source="MyRevitPlugin.addin" />
-      </Component>
-
-    </Directory>
-
-    <Directory Id="TARGETDIR9" Name="ABSOLUTEPATH8">
-
-      <Component Id="Component.MyRevitPlugin.addin_4046448068" Guid="6fe30b47-2577-43ad-9095-186174fbff4c">
-        <File Id="MyRevitPlugin.addin_4046448068" Source="MyRevitPlugin.addin" />
-      </Component>
-
-    </Directory>
-
-    <Directory Id="TARGETDIR10" Name="ABSOLUTEPATH9">
-
-      <Component Id="Component.MyRevitPlugin.addin_3859661823" Guid="6fe30b47-2577-43ad-9095-18612746e837">
-        <File Id="MyRevitPlugin.addin_3859661823" Source="MyRevitPlugin.addin" />
-      </Component>
-
-    </Directory>
-
-    <Directory Id="TARGETDIR11" Name="ABSOLUTEPATH10">
-
-      <Component Id="Component.MyRevitPlugin.addin_3609886922" Guid="6fe30b47-2577-43ad-9095-18610d0406f7">
-        <File Id="MyRevitPlugin.addin_3609886922" Source="MyRevitPlugin.addin" />
-      </Component>
-
-    </Directory>
-
-    <Directory Id="TARGETDIR12" Name="ABSOLUTEPATH11">
-
-      <Component Id="Component.MyRevitPlugin.addin_4084851933" Guid="6fe30b47-2577-43ad-9095-1861b89766c4">
-        <File Id="MyRevitPlugin.addin_4084851933" Source="MyRevitPlugin.addin" />
-      </Component>
-
-    </Directory>
+    <Icon Id="app_icon.ico" SourceFile="Resources\MyIcon.ico" />
 
     <WixUI Id="WixUI_Minimal" xmlns="http://wixtoolset.org/schemas/v4/wxs/ui" />
 
+    <UI>
+      <EmbeddedUI Id="WixSharp_EmbeddedUI_Asm" SourceFile="WixSharp.UI.CA.dll" />
+    </UI>
+
     <WixVariable Id="WixUIBannerBmp" Value="Resources\MyBanner.png" />
     <WixVariable Id="WixUIDialogBmp" Value="Resources\MyBackground.png" />
-    <WixVariable Id="WixUILicenseRtf" Value="Resources\MyLicence.rtf" />
 
-    <CustomAction Id="Set_DirAbsolutePath" Property="INSTALLDIR" Value="C:\ProgramData\My\Revit" />
-    <CustomAction Id="Set_DirAbsolutePath1" Property="TARGETDIR2" Value="C:\ProgramData\Autodesk\Revit\Addins\2015" />
-    <CustomAction Id="Set_DirAbsolutePath2" Property="TARGETDIR3" Value="C:\ProgramData\Autodesk\Revit\Addins\2016" />
-    <CustomAction Id="Set_DirAbsolutePath3" Property="TARGETDIR4" Value="C:\ProgramData\Autodesk\Revit\Addins\2017" />
-    <CustomAction Id="Set_DirAbsolutePath4" Property="TARGETDIR5" Value="C:\ProgramData\Autodesk\Revit\Addins\2018" />
-    <CustomAction Id="Set_DirAbsolutePath5" Property="TARGETDIR6" Value="C:\ProgramData\Autodesk\Revit\Addins\2019" />
-    <CustomAction Id="Set_DirAbsolutePath6" Property="TARGETDIR7" Value="C:\ProgramData\Autodesk\Revit\Addins\2020" />
-    <CustomAction Id="Set_DirAbsolutePath7" Property="TARGETDIR8" Value="C:\ProgramData\Autodesk\Revit\Addins\2021" />
-    <CustomAction Id="Set_DirAbsolutePath8" Property="TARGETDIR9" Value="C:\ProgramData\Autodesk\Revit\Addins\2022" />
-    <CustomAction Id="Set_DirAbsolutePath9" Property="TARGETDIR10" Value="C:\ProgramData\Autodesk\Revit\Addins\2023" />
-    <CustomAction Id="Set_DirAbsolutePath10" Property="TARGETDIR11" Value="C:\ProgramData\Autodesk\Revit\Addins\2024" />
-    <CustomAction Id="Set_DirAbsolutePath11" Property="TARGETDIR12" Value="C:\ProgramData\Autodesk\Revit\Addins\2025" />
+    <CustomAction Id="WixSharp_InitRuntime_Action" BinaryRef="WixSharp_InitRuntime_Action_File" DllEntry="WixSharp_InitRuntime_Action" Return="check" Execute="immediate" />
+    <CustomAction Id="Set_CancelRequestHandler_Props" Property="CancelRequestHandler" Value="UpgradeCode=[UpgradeCode];INSTALLDIR=[INSTALLDIR];UILevel=[UILevel];ProductCode=[ProductCode];ADDLOCAL=[ADDLOCAL];ADDFEATURES=[ADDFEATURES]" />
+    <CustomAction Id="CancelRequestHandler" BinaryRef="WixSharp_InitRuntime_Action_File" DllEntry="CancelRequestHandler" Return="check" Impersonate="no" Execute="deferred" />
+    <CustomAction Id="Set_WixSharp_AfterInstall_Action_Props" Property="WixSharp_AfterInstall_Action" Value="WixSharp_AfterInstall_Handlers=[WixSharp_AfterInstall_Handlers];WIXSHARP_RUNTIME_DATA=[WIXSHARP_RUNTIME_DATA];INSTALLDIR=[INSTALLDIR];UILevel=[UILevel];ProductName=[ProductName];FOUNDPREVIOUSVERSION=[FOUNDPREVIOUSVERSION];UpgradeCode=[UpgradeCode];MsiLogFileLocation=[MsiLogFileLocation];INSTALLDIR=[INSTALLDIR];UILevel=[UILevel];ProductCode=[ProductCode];ADDLOCAL=[ADDLOCAL];ADDFEATURES=[ADDFEATURES]" />
+    <CustomAction Id="WixSharp_AfterInstall_Action" BinaryRef="WixSharp_InitRuntime_Action_File" DllEntry="WixSharp_AfterInstall_Action" Return="check" Impersonate="no" Execute="deferred" />
 
-    <UIRef Id="WixUI_ErrorProgressText" />
+    <Binary Id="WixSharp_InitRuntime_Action_File" SourceFile="WixSharp.CA.dll" />
+    <Binary Id="WixSharp_UIText" SourceFile="..\..\..\..\..\..\..\ProgramData\WixSharp\2.1.5.0\WixUI_en-US.wxl" />
+    <Binary Id="WixSharp_LicenceFile" SourceFile="MyRevitPlugin_Debug.licence.rtf" />
+    <Binary Id="WixSharpUI_Bmp_Dialog" SourceFile="Resources\MyBackground.png" />
+    <Binary Id="WixSharpUI_Bmp_Banner" SourceFile="Resources\MyBanner.png" />
 
-    <Property Id="INSTALLDIR_ABSOLUTEPATH" Value="C:\ProgramData\My\Revit" />
+    <Property Id="WixSharp_UI_INSTALLDIR" Value="INSTALLDIR" />
+    <Property Id="UAC_WARNING" Value="Please wait for UAC prompt to appear.&#xD;&#xA;&#xD;&#xA;If it appears minimized then activate it from the taskbar." />
+    <Property Id="WixSharp_InstallDialogs" Value="WixSharp.UI, Version=2.1.5.0, Culture=neutral, PublicKeyToken=3775edd25acc43c2|WixSharp.UI.Forms.WelcomeDialog&#xA;WixSharp.UI, Version=2.1.5.0, Culture=neutral, PublicKeyToken=3775edd25acc43c2|WixSharp.UI.Forms.ProgressDialog&#xA;WixSharp.UI, Version=2.1.5.0, Culture=neutral, PublicKeyToken=3775edd25acc43c2|WixSharp.UI.Forms.ExitDialog" />
+    <Property Id="WixSharp_ModifyDialogs" Value="WixSharp.UI, Version=2.1.5.0, Culture=neutral, PublicKeyToken=3775edd25acc43c2|WixSharp.UI.Forms.MaintenanceTypeDialog&#xA;WixSharp.UI, Version=2.1.5.0, Culture=neutral, PublicKeyToken=3775edd25acc43c2|WixSharp.UI.Forms.ProgressDialog&#xA;WixSharp.UI, Version=2.1.5.0, Culture=neutral, PublicKeyToken=3775edd25acc43c2|WixSharp.UI.Forms.ExitDialog" />
+    <Property Id="WixSharp_AfterInstall_Handlers" Value="MyWixSetup, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|MyWixSetup.Program|Project_AfterInstall" />
+    <Property Id="ARPPRODUCTICON" Value="app_icon.ico" />
 
     <Feature Id="Complete" Title="Complete" Level="1" AllowAbsent="yes">
-      <ComponentRef Id="Component.CommunityToolkit.Mvvm.dll_2016966641" />
-      <ComponentRef Id="Component.CommunityToolkit.Mvvm.pdb_3525678083" />
-      <ComponentRef Id="Component.CommunityToolkit.Mvvm.xml_2360143669" />
-      <ComponentRef Id="Component.JetBrains.Annotations.dll_1667585502" />
-      <ComponentRef Id="Component.Microsoft.Bcl.AsyncInterfaces.dll_1106543536" />
-      <ComponentRef Id="Component.Microsoft.Bcl.AsyncInterfaces.xml_50905788" />
-      <ComponentRef Id="Component.MyRevitExtensions.dll_1037195606" />
-      <ComponentRef Id="Component.MyRevitExtensions.pdb_2545907056" />
-      <ComponentRef Id="Component.MyRevitPlugin.dll_2875266749" />
-      <ComponentRef Id="Component.MyRevitPlugin.dll.config_3309824699" />
-      <ComponentRef Id="Component.MyRevitPlugin.pdb_1366555299" />
-      <ComponentRef Id="Component.MyRevitViewModels.dll_1845075952" />
-      <ComponentRef Id="Component.MyRevitViewModels.dll.config_258713510" />
-      <ComponentRef Id="Component.MyRevitViewModels.pdb_1572635598" />
-      <ComponentRef Id="Component.MyRevitViews.dll_1206675701" />
-      <ComponentRef Id="Component.MyRevitViews.dll.config_1707011730" />
-      <ComponentRef Id="Component.MyRevitViews.pdb_1996669981" />
-      <ComponentRef Id="Component.Nice3point.Revit.Extensions.dll_2482311304" />
-      <ComponentRef Id="Component.Nice3point.Revit.Toolkit.dll_2443494728" />
-      <ComponentRef Id="Component.Serilog.dll_1656815965" />
-      <ComponentRef Id="Component.Serilog.Sinks.Debug.dll_1280275990" />
-      <ComponentRef Id="Component.Serilog.Sinks.Debug.xml_1280210466" />
-      <ComponentRef Id="Component.Serilog.xml_1656881481" />
-      <ComponentRef Id="Component.System.Buffers.dll_2887318175" />
-      <ComponentRef Id="Component.System.Buffers.xml_3651992224" />
-      <ComponentRef Id="Component.System.ComponentModel.Annotations.dll_1280228717" />
-      <ComponentRef Id="Component.System.Memory.dll_1472523357" />
-      <ComponentRef Id="Component.System.Memory.xml_416885609" />
-      <ComponentRef Id="Component.System.Numerics.Vectors.dll_3892281862" />
-      <ComponentRef Id="Component.System.Numerics.Vectors.xml_3892216354" />
-      <ComponentRef Id="Component.System.Runtime.CompilerServices.Unsafe.dll_519215241" />
-      <ComponentRef Id="Component.System.Runtime.CompilerServices.Unsafe.xml_990812298" />
-      <ComponentRef Id="Component.System.Threading.Tasks.Extensions.dll_1523178648" />
-      <ComponentRef Id="Component.System.Threading.Tasks.Extensions.xml_441434236" />
-      <ComponentRef Id="Component.MyRevitPlugin.addin_494968174" />
-      <ComponentRef Id="Component.MyRevitPlugin.addin_383892497" />
-      <ComponentRef Id="Component.MyRevitPlugin.addin_341039804" />
-      <ComponentRef Id="Component.MyRevitPlugin.addin_302276839" />
-      <ComponentRef Id="Component.MyRevitPlugin.addin_552434042" />
-      <ComponentRef Id="Component.MyRevitPlugin.addin_3833160478" />
-      <ComponentRef Id="Component.MyRevitPlugin.addin_4089200785" />
-      <ComponentRef Id="Component.MyRevitPlugin.addin_4046448068" />
-      <ComponentRef Id="Component.MyRevitPlugin.addin_3859661823" />
-      <ComponentRef Id="Component.MyRevitPlugin.addin_3609886922" />
-      <ComponentRef Id="Component.MyRevitPlugin.addin_4084851933" />
+      <ComponentRef Id="Component.CommunityToolkit.Mvvm.dll_3956473251" />
+      <ComponentRef Id="Component.CommunityToolkit.Mvvm.pdb_1955659163" />
+      <ComponentRef Id="Component.CommunityToolkit.Mvvm.xml_3484876196" />
+      <ComponentRef Id="Component.JetBrains.Annotations.dll_2355680511" />
+      <ComponentRef Id="Component.Microsoft.Bcl.AsyncInterfaces.dll_691028777" />
+      <ComponentRef Id="Component.Microsoft.Bcl.AsyncInterfaces.xml_4221322026" />
+      <ComponentRef Id="Component.MyRevitExtensions.dll_1738222007" />
+      <ComponentRef Id="Component.MyRevitExtensions.pdb_3738511807" />
+      <ComponentRef Id="Component.MyRevitPlugin.dll_3671992637" />
+      <ComponentRef Id="Component.MyRevitPlugin.dll.config_2832300400" />
+      <ComponentRef Id="Component.MyRevitPlugin.pdb_3200002373" />
+      <ComponentRef Id="Component.MyRevitViewModels.dll_2749658491" />
+      <ComponentRef Id="Component.MyRevitViewModels.dll.config_1025864464" />
+      <ComponentRef Id="Component.MyRevitViewModels.pdb_2277406067" />
+      <ComponentRef Id="Component.MyRevitViews.dll_231748067" />
+      <ComponentRef Id="Component.MyRevitViews.dll.config_2603940082" />
+      <ComponentRef Id="Component.MyRevitViews.pdb_504188421" />
+      <ComponentRef Id="Component.Nice3point.Revit.Extensions.dll_3706584554" />
+      <ComponentRef Id="Component.Nice3point.Revit.Toolkit.dll_200097035" />
+      <ComponentRef Id="Component.Serilog.dll_2276841983" />
+      <ComponentRef Id="Component.Serilog.Sinks.Debug.dll_2549883592" />
+      <ComponentRef Id="Component.Serilog.Sinks.Debug.xml_4115705389" />
+      <ComponentRef Id="Component.Serilog.xml_3842139492" />
+      <ComponentRef Id="Component.System.Buffers.dll_3977900418" />
+      <ComponentRef Id="Component.System.Buffers.xml_3977965950" />
+      <ComponentRef Id="Component.System.ComponentModel.Annotations.dll_2621642357" />
+      <ComponentRef Id="Component.System.Memory.dll_2422641196" />
+      <ComponentRef Id="Component.System.Memory.xml_421696045" />
+      <ComponentRef Id="Component.System.Numerics.Vectors.dll_2251328537" />
+      <ComponentRef Id="Component.System.Numerics.Vectors.xml_3818198910" />
+      <ComponentRef Id="Component.System.Runtime.CompilerServices.Unsafe.dll_717231331" />
+      <ComponentRef Id="Component.System.Runtime.CompilerServices.Unsafe.xml_717165775" />
+      <ComponentRef Id="Component.System.Threading.Tasks.Extensions.dll_3732242450" />
+      <ComponentRef Id="Component.System.Threading.Tasks.Extensions.xml_3260645393" />
+      <ComponentRef Id="My" />
+      <ComponentRef Id="Revit" />
     </Feature>
 
     <InstallExecuteSequence>
-      <Custom Condition="(NOT Installed) AND (UILevel &lt; 5) AND (INSTALLDIR = ABSOLUTEPATH)" Action="Set_DirAbsolutePath" Before="AppSearch" />
-      <Custom Condition="(NOT Installed) AND (UILevel &lt; 5) AND (TARGETDIR2 = ABSOLUTEPATH1)" Action="Set_DirAbsolutePath1" Before="AppSearch" />
-      <Custom Condition="(NOT Installed) AND (UILevel &lt; 5) AND (TARGETDIR3 = ABSOLUTEPATH2)" Action="Set_DirAbsolutePath2" Before="AppSearch" />
-      <Custom Condition="(NOT Installed) AND (UILevel &lt; 5) AND (TARGETDIR4 = ABSOLUTEPATH3)" Action="Set_DirAbsolutePath3" Before="AppSearch" />
-      <Custom Condition="(NOT Installed) AND (UILevel &lt; 5) AND (TARGETDIR5 = ABSOLUTEPATH4)" Action="Set_DirAbsolutePath4" Before="AppSearch" />
-      <Custom Condition="(NOT Installed) AND (UILevel &lt; 5) AND (TARGETDIR6 = ABSOLUTEPATH5)" Action="Set_DirAbsolutePath5" Before="AppSearch" />
-      <Custom Condition="(NOT Installed) AND (UILevel &lt; 5) AND (TARGETDIR7 = ABSOLUTEPATH6)" Action="Set_DirAbsolutePath6" Before="AppSearch" />
-      <Custom Condition="(NOT Installed) AND (UILevel &lt; 5) AND (TARGETDIR8 = ABSOLUTEPATH7)" Action="Set_DirAbsolutePath7" Before="AppSearch" />
-      <Custom Condition="(NOT Installed) AND (UILevel &lt; 5) AND (TARGETDIR9 = ABSOLUTEPATH8)" Action="Set_DirAbsolutePath8" Before="AppSearch" />
-      <Custom Condition="(NOT Installed) AND (UILevel &lt; 5) AND (TARGETDIR10 = ABSOLUTEPATH9)" Action="Set_DirAbsolutePath9" Before="AppSearch" />
-      <Custom Condition="(NOT Installed) AND (UILevel &lt; 5) AND (TARGETDIR11 = ABSOLUTEPATH10)" Action="Set_DirAbsolutePath10" Before="AppSearch" />
-      <Custom Condition="(NOT Installed) AND (UILevel &lt; 5) AND (TARGETDIR12 = ABSOLUTEPATH11)" Action="Set_DirAbsolutePath11" Before="AppSearch" />
+      <Custom Condition=" (1) " Action="WixSharp_InitRuntime_Action" Before="AppSearch" />
+      <Custom Action="Set_CancelRequestHandler_Props" Before="InstallFinalize" />
+      <Custom Condition=" (1) " Action="CancelRequestHandler" After="Set_CancelRequestHandler_Props" />
+      <Custom Action="Set_WixSharp_AfterInstall_Action_Props" After="InstallFiles" />
+      <Custom Condition="1" Action="WixSharp_AfterInstall_Action" After="Set_WixSharp_AfterInstall_Action_Props" />
     </InstallExecuteSequence>
-
-    <InstallUISequence>
-      <Custom Condition="(NOT Installed) AND (UILevel = 5) AND (INSTALLDIR = ABSOLUTEPATH)" Action="Set_DirAbsolutePath" Before="AppSearch" />
-      <Custom Condition="(NOT Installed) AND (UILevel = 5) AND (TARGETDIR2 = ABSOLUTEPATH1)" Action="Set_DirAbsolutePath1" Before="AppSearch" />
-      <Custom Condition="(NOT Installed) AND (UILevel = 5) AND (TARGETDIR3 = ABSOLUTEPATH2)" Action="Set_DirAbsolutePath2" Before="AppSearch" />
-      <Custom Condition="(NOT Installed) AND (UILevel = 5) AND (TARGETDIR4 = ABSOLUTEPATH3)" Action="Set_DirAbsolutePath3" Before="AppSearch" />
-      <Custom Condition="(NOT Installed) AND (UILevel = 5) AND (TARGETDIR5 = ABSOLUTEPATH4)" Action="Set_DirAbsolutePath4" Before="AppSearch" />
-      <Custom Condition="(NOT Installed) AND (UILevel = 5) AND (TARGETDIR6 = ABSOLUTEPATH5)" Action="Set_DirAbsolutePath5" Before="AppSearch" />
-      <Custom Condition="(NOT Installed) AND (UILevel = 5) AND (TARGETDIR7 = ABSOLUTEPATH6)" Action="Set_DirAbsolutePath6" Before="AppSearch" />
-      <Custom Condition="(NOT Installed) AND (UILevel = 5) AND (TARGETDIR8 = ABSOLUTEPATH7)" Action="Set_DirAbsolutePath7" Before="AppSearch" />
-      <Custom Condition="(NOT Installed) AND (UILevel = 5) AND (TARGETDIR9 = ABSOLUTEPATH8)" Action="Set_DirAbsolutePath8" Before="AppSearch" />
-      <Custom Condition="(NOT Installed) AND (UILevel = 5) AND (TARGETDIR10 = ABSOLUTEPATH9)" Action="Set_DirAbsolutePath9" Before="AppSearch" />
-      <Custom Condition="(NOT Installed) AND (UILevel = 5) AND (TARGETDIR11 = ABSOLUTEPATH10)" Action="Set_DirAbsolutePath10" Before="AppSearch" />
-      <Custom Condition="(NOT Installed) AND (UILevel = 5) AND (TARGETDIR12 = ABSOLUTEPATH11)" Action="Set_DirAbsolutePath11" Before="AppSearch" />
-    </InstallUISequence>
   </Package>
 </Wix>
 
