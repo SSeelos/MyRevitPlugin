@@ -19,6 +19,7 @@ namespace MyWixSetup
             Console.WriteLine("Install Directory");
             Console.WriteLine(dir);
             project.Dirs = new Dir[] { new InstallDir(dir,
+                //todo: fetch output directory from project?
                 new Files(@"..\MyRevitPlugin\bin\Release\*.*")
                 )};
         }
@@ -75,14 +76,5 @@ namespace MyWixSetup
             //project.Dirs = project.Dirs.Concat(dirs
             //    .Select(dir => new Dir(dir, new File($"{nameof(MyRevitPlugin)}.addin")))).ToArray();
         }
-
-        [CustomAction]
-        public static ActionResult CustomAction(Session session)
-        {
-            session.Log("Begin CustomAction");
-
-            return ActionResult.Success;
-        }
-
     }
 }

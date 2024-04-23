@@ -4,7 +4,6 @@ namespace WixSharp
 {
     public static class CustomActions
     {
-
         [CustomAction]
         public static ActionResult CustomAction(Session session)
         {

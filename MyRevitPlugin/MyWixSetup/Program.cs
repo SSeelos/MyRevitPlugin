@@ -36,7 +36,6 @@ namespace MyWixSetup
                     //LicenceFile = @"Resources\MyLicence.rtf",
                     ManagedUI = new ManagedUI()
                     {
-                        //todo: uninstall dialog??
                         InstallDialogs = new ManagedDialogs()
                             .Add(Dialogs.Welcome)
                             //.Add(Dialogs.Licence)
@@ -78,14 +77,6 @@ namespace MyWixSetup
             e.Session.Message(InstallMessage.Info, new Record($"MyPath: {scope.ToMyRevitPath()}"));
             e.Session.Message(InstallMessage.Info, new Record($"RvtPath: {scope.ToRevitAddinsPath()}"));
 #endif
-            //if (e.IsInstalling)
-            //{
-            //    InstallAddinFile(scope);
-            //}
-            //else if (e.IsUninstalling)
-            //{
-            //    UninstallAddinFile(scope);
-            //}
             switch (e.Mode)
             {
                 case SetupEventArgs.SetupMode.Installing:
@@ -112,7 +103,7 @@ namespace MyWixSetup
         public static void InstallAddinFile(InstallScope scope)
         {
             var xmlAddIn = AddInDef.GetAddIns($@"{scope.ToMyRevitPath()}\{Name}")
-                .SerializeXml();
+                .SerializeXml(Resources.XSL);
 
             var rvtDir = new DirectoryInfo(scope.ToRevitAddinsPath());
             foreach (var dir in rvtDir.GetDirectories())
